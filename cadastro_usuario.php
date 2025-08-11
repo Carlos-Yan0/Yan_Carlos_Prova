@@ -5,8 +5,10 @@ require_once 'conexao.php';
 //VERIFICA SE O USUARIO TEM PERMISSAO
 //SUPONDO QUE O PERFIL 1 SEJA ADM
 if($_SESSION['perfil'] != 1){
-    echo "Acesso negado!";
+    echo "<script>alert('Acesso Negado!');window.locarion.href='principal.php';</script>";
+        exit();
 }
+
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     $nome = $_POST['nome'];
     $email = $_POST['email'];
