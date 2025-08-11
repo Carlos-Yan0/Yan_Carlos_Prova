@@ -31,7 +31,7 @@ $permissoes = [
     //secretaria
     2 => ["cadastrar"=>["cadastro_cliente.php"],
 
-    "buscar"=>["buscar_cliente.php", "buscar_fornecedor.php", "buscar_produto.php"],
+    "buscar"=>["buscar_cliente.php", "buscar_fornecedor.php", "buscar_produto.php", "buscar_usuario.php"],
 
     "alterar"=>["alterar_fornecedor.php", "alterar_produto.php"],
 
