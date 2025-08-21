@@ -49,7 +49,7 @@ if (isset($_GET['id']) && is_numeric(trim($_GET['id']))) {
     <h2 class="text-center">Excluir funcionário</h2>
 
     <?php if (!empty($usuarios)): ?>
-        <table class="table">
+        <table class="table table-hover">
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
