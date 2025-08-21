@@ -171,3 +171,11 @@ button:hover {
 .form-select, select{
     width: 80%;
 }
+.form-input, input[type="number"]{
+    width: 80%; /* Ocupa toda a largura do formulário */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
