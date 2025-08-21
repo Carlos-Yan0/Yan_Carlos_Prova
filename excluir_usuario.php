@@ -76,10 +76,8 @@ if (isset($_GET['id']) && is_numeric(trim($_GET['id']))) {
         <p>Nenhum usuário encontrado</p>
     <?php endif; ?>
 
-    <div class="text-center">
-        <a href="principal.php">Voltar </a>
-    </div>
-<address>Yan Carlos de Oliveira - Desenvolvimento de Sistemas - Senai</address>
+    <a href="principal.php">Voltar</a>
+    <address>Yan Carlos de Oliveira - Desenvolvimento de Sistemas - Senai</address>
 </body>
 
 </html>
