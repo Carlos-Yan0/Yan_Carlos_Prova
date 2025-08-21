@@ -66,6 +66,7 @@ $opcoes_menu = $permissoes[$id_perfil];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Principal</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
 </head>
@@ -76,28 +77,13 @@ $opcoes_menu = $permissoes[$id_perfil];
         </div>
         <div class="logout">
             <form action="logout.php" method="POST">
-                <button type="submit">LogOut</button>
+                <button type="submit" class="btn btn-outline-danger">LogOut</button>
             </form>
         </div>
     </header>
 
-    <nav>
-        <ul class="menu">
-            <?php foreach($opcoes_menu as $categoria => $arquivos):  ?>
-                <li class="dropdown">
-                    <a href="#"><?=$categoria?></a>
-                    <ul class="dropdown-menu">
-                        <?php foreach($arquivos as $arquivo): ?>
-                            <li>
-                                <a href="<?=$arquivo ?>"><?= ucfirst(str_replace("_"," ",basename($arquivo, ".php"))) ?></a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </nav>
+    <?php require_once "sidebar.php"?>
 
-    
+    <address>Yan Carlos de Oliveira - Desenvolvimento de Sistemas - Senai</address>
 </body>
 </html>

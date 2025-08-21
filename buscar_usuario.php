@@ -40,22 +40,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busca de funcionarios</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
+    <?php require_once "sidebar.php";?>
     <h2>Lista de Usuários</h2>
 
     <form action="buscar_usuario.php" method="POST">
         <label for="busca">Digite o ID ou NOME(opcional): </label>
-        <input type="text" id="busca" name="busca">
-        <button type="submit">Confirmar</button>
+        <input type="text" id="busca" name="busca" class="form-control">
+        <button type="submit" class="btn btn-success">Confirmar</button>
     </form>
 
     <?php if(!empty($usuarios)): ?>
 
-        <table border="1"cellpadding="10">
+        <table class="table">
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
@@ -81,5 +82,6 @@
         <?php endif; ?>
 
         <a href="principal.php">Voltar</a>
+        <address>Yan Carlos de Oliveira - Desenvolvimento de Sistemas - Senai</address>
 </body>
 </html>

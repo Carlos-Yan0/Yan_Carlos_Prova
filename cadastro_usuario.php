@@ -36,32 +36,35 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Usuario</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <?php require_once "sidebar.php"; ?>
     <h2>Cadastrar Usuario</h2>
     <form action="cadastro_usuario.php" method="POST">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <input type="text" id="nome" name="nome" class="form-control" required>
 
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" class="form-control" required>
 
         <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required>
+        <input type="password" id="senha" name="senha" class="form-control" required>
 
         <label for="id_perfil">Perfil</label>
-        <select name="id_perfil" id="id_perfil">
+        <select name="id_perfil" id="id_perfil" class="form-select">
             <option value="1">Administrador</option>
             <option value="2">Secretaria</option>
             <option value="3">Almoxarife</option>
             <option value="4">Cliente</option>
         </select>
 
-        <button type="submit">Salvar</button>
-        <button type="reset">Cancelar</button>
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <button type="reset" class="btn btn-success">Cancelar</button>
     </form>
     
     <a href="principal.php">Voltar</a>
+    <address>Yan Carlos de Oliveira - Desenvolvimento de Sistemas - Senai</address>
 </body>
 </html>

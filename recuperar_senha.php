@@ -39,16 +39,18 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>recuperar senha</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h2>Recuperar senha</h2>
     <form action="recuperar_senha.php" method="POST">
         <label for="email">Digite o seu email cadastrado</label>
-        <input type="email" name="email" id="email" required>
+        <input type="email" name="email" id="email" class="form-control" required>
 
-        <button type="submit">Enviar a senha temporaria</button>
+        <button type="submit" class="btn btn-success">Enviar a senha temporaria</button>
     </form>
-    
+    <a href="index.php">Voltar</a>
+    <address>Yan Carlos de Oliveira - Desenvolvimento de Sistemas - Senai</address>
 </body>
 </html>

@@ -40,21 +40,22 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Login</h1>
     <form action="index.php" method="POST">
         <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" class="form-control" required>
 
         <label for="senha">Senha</label>
-        <input type="password" id="senha" name="senha" required>
+        <input type="password" id="senha" name="senha" class="form-control" required>
 
-        <button type="submit">Entrar</button>
+        <button type="submit" class="btn btn-success">Entrar</button>
     </form>
 
-    <p><a href="recuperar_senha.php">Esqueci a minha senha</a></p>
-    
+    <p><a href="recuperar_senha.php">Esqueceu a senha?</a></p>
+    <address>Yan Carlos de Oliveira - Desenvolvimento de Sistemas - Senai</address>
 </body>
 </html>

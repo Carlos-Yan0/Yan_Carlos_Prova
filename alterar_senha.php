@@ -45,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar senha</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -54,17 +55,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <form action="alterar_senha.php" method="POST">
         <label for="nova_senha">Nova Senha:</label>
-        <input type="password" name="nova_senha" id="nova_senha" required>
+        <input type="password" name="nova_senha" id="nova_senha" class="form-control" required>
 
 
         <label for="confirmar_senha">Confirmar Senha:</label>
-        <input type="password" name="confirmar_senha" id="confirmar_senha" required>
+        <input type="password" name="confirmar_senha" id="confirmar_senha" class="form-control" required>
         
         <label for="">
             <input type="checkbox" onclick="mostrarSenha()"> Mostrar senha
         </label>
 
-        <button type="submit">Salvar nova senha</button>
+        <button type="submit" class="btn btn-success">Salvar nova senha</button>
     </form>
 
     <script>
@@ -79,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     </script>
-
+    <address>Yan Carlos de Oliveira - Desenvolvimento de Sistemas - Senai</address>
 </body>
 
 </html>
