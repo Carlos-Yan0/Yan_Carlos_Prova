@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- SE O USUARIO LOGADO FOR ADM, EXIBIR OPCAO DE ALTERAR SENHA -->
             <?php if ($_SESSION['perfil'] == 1): ?>
                 <label for="nova_senha">Nova senha</label>
-                <input type="password" name="nova_senha" id="nova_senha" class="form-control">
+                <input type="password" name="nova_senha" id="nova_senha" class="form-control" minlength="8">
             <?php endif; ?>
 
             <button type="submit" class="btn btn-success">Alterar</button>

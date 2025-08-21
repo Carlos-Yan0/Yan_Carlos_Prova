@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         <input type="email" id="email" name="email" class="form-control" required>
 
         <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" class="form-control" required>
+        <input type="password" id="senha" name="senha" class="form-control"  required minlength="8">
 
         <label for="id_perfil">Perfil</label>
         <select name="id_perfil" id="id_perfil" class="form-select">

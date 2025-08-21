@@ -55,11 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <form action="alterar_senha.php" method="POST">
         <label for="nova_senha">Nova Senha:</label>
-        <input type="password" name="nova_senha" id="nova_senha" class="form-control" required>
+        <input type="password" name="nova_senha" id="nova_senha" class="form-control" required minlength="8">
 
 
         <label for="confirmar_senha">Confirmar Senha:</label>
-        <input type="password" name="confirmar_senha" id="confirmar_senha" class="form-control" required>
+        <input type="password" name="confirmar_senha" id="confirmar_senha" class="form-control" required minlength="8">
         
         <label for="">
             <input type="checkbox" onclick="mostrarSenha()"> Mostrar senha
