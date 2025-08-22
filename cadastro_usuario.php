@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <hr>
     <form action="cadastro_usuario.php" method="POST">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" class="form-control" required>
+        <input type="text" id="nome" name="nome" class="form-control" required minlength="3" pattern="^[A-Za-zÀ-ÿ\s]+$">
 
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" class="form-control" required>

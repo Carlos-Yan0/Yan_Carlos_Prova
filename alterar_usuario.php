@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="hidden" name="id_usuario" class="form-control" value="<?= htmlspecialchars($usuario['id_usuario']) ?>">
 
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" class="form-control" value="<?= htmlspecialchars($usuario['nome']) ?>" required>
+            <input type="text" id="nome" name="nome" class="form-control" value="<?= htmlspecialchars($usuario['nome']) ?>" required minlength="3" pattern="^[A-Za-zÀ-ÿ\s]+$">
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" class="form-control" value="<?= htmlspecialchars($usuario['email']) ?>" required>
