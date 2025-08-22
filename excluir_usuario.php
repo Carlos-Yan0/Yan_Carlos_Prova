@@ -51,7 +51,9 @@ if (isset($_GET['id']) && is_numeric(trim($_GET['id']))) {
 
 <body>
     <?php require_once "sidebar.php";?>
+    <hr>
     <h2 class="text-center">Excluir funcionário</h2>
+    <hr>
 
     <?php if (!empty($usuarios)): ?>
         <table class="table table-hover">

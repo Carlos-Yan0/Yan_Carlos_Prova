@@ -59,8 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <?php require_once "sidebar.php";?>
+    <hr>
     <h2 class="title">Alterar usuário</h2>
-
+    <hr>
     <form action="alterar_usuario.php" method="POST">
         <label for="busca_usuario">Digite o id ou nome do usuário</label>
         <input type="text" id="busca_usuario" name="busca_usuario" class="form-control" required onkeyup="buscarSugestoes()">

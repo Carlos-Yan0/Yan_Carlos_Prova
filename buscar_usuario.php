@@ -51,8 +51,9 @@
 
 <body>
     <?php require_once "sidebar.php";?>
+    <hr>
     <h2>Lista de Usuários</h2>
-
+    <hr>
     <form action="buscar_usuario.php" method="POST">
         <label for="busca">Digite o ID ou NOME(opcional): </label>
         <input type="text" id="busca" name="busca" class="form-control">

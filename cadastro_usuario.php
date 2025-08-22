@@ -46,7 +46,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 </head>
 <body>
     <?php require_once "sidebar.php"; ?>
+    <hr>
     <h2>Cadastrar Usuario</h2>
+    <hr>
     <form action="cadastro_usuario.php" method="POST">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" class="form-control" required>
