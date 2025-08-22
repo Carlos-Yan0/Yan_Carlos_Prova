@@ -2,6 +2,11 @@
 session_start();
 require_once "conexao.php";
 
+if (!isset($_SESSION["id_usuario"])) {
+    echo "<script>alert('Acesso Negado!');window.location.href='index.php';</script>";
+    exit();
+}
+
 if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['busca'])){
     $busca = trim($_POST['busca']);
 

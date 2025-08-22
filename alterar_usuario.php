@@ -2,8 +2,13 @@
 session_start();
 require_once("conexao.php");
 
+if (!isset($_SESSION["id_usuario"])) {
+    echo "<script>alert('Acesso Negado!');window.location.href='index.php';</script>";
+    exit();
+}
+
 // VERIFICA SE O USUARIO TEM PERMISSAO DE ADM
-if ($_SESSION['perfil'] != 1) {
+if ($_SESSION['perfil'] != 1 || !isset($_SESSION["id_usuario"])) {
     echo "<script>alert('Acesso negado!');window.location.href='principal.php'</script>";
     exit();
 }
