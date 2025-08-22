@@ -55,9 +55,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['busca'])){
     <hr>
     <form action="alterar_produto.php" method="POST">
         <label for="busca">Digite o ID ou o nome do produto</label>
-        <input type="text" name="busca" class="form-control">
+        <input type="text" name="busca" class="form-control" required>
 
-        <div id="sugestoes"></div>
         <button type="submit" class="btn btn-success">Buscar</button>
     </form>
 
@@ -77,7 +76,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && !empty($_POST['busca'])){
             <input type="number" id="qtde" name="qtde" class="form-control" value="<?= htmlspecialchars($produto['qtde']) ?>" required min="0">
 
             <label for="valor_unitario">Valor Unitario:</label>
-            <input type="number" id="valor_unit" name="valor_unit" class="form-control" value="<?= htmlspecialchars($produto['valor_unit']) ?>" required min="0" step="0.1">
+            <input type="number" id="valor_unit" name="valor_unit" class="form-control" value="<?= htmlspecialchars($produto['valor_unit']) ?>" required min="0" step="0.01">
 
             <button type="submit" class="btn btn-success">Alterar</button>
             <button type="reset" class="btn btn-success">Cancelar</button>

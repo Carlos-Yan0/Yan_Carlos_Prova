@@ -25,7 +25,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $valor_unit = $_POST["valor_unit"];
     }
 
-
     $sql = "INSERT INTO produto(nome_prod, descricao, qtde, valor_unit)VALUES(:nome_prod, :descricao, :qtde, :valor_unit)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(":nome_prod", $nome_prod, PDO::PARAM_STR);
@@ -60,21 +59,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <hr>
     <form action="cadastro_produto.php" method="POST">
         <label for="nome_produto">Nome do produto:</label>
-        <input type="text" name="nome_prod" class="form-control" required minlength="3">
+        <input type="text" name="nome_prod" id="nome_prod" class="form-control" required minlength="3">
 
         <label for="descricao_produto">Descrição do produto:</label>
-        <input type="text" name="descricao" class="form-control">
+        <input type="text" name="descricao" id="descricao" class="form-control" required>
 
         <label for="quantidade_produto">Quantidade do Produto</label>
-        <input type="number" name="qtde" min="0" class="form-control">
+        <input type="number" name="qtde" min="0" id="qtde" class="form-control" required>
 
         <label for="valor_unitario">Valor Unitario</label>
-        <input type="text" name="valor_unit" class="form-control" min="0" step="0.1">
+        <input type="number" name="valor_unit" id="valor_unit" class="form-control" min="0" step="0.01" required>
 
         <button type="submit" class="btn btn-success">Cadastrar</button>
     </form>
-
-        <a href="principal.php">Voltar</a>
+            <a href="principal.php">Voltar</a>
+        
         <address>Yan Carlos de Oliveira - Desenvolvimento de Sistemas - Senai</address>
 </body>
 </html>
